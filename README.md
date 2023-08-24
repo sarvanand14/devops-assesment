@@ -1,4 +1,4 @@
-# devops-assesment
+# Devops-assesment
 
 1.Deploy postgres as statefulset in kubernetes
   
