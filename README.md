@@ -41,11 +41,19 @@ add the exporter service name in the prometheus targets section  in  values.yaml
         - exporter-prometheus-postgres-exporter
 
 After adding the exporter details upgrade the prometheus helm chart with the following command
+my-release-postgresql                   Opaque               1      13h
 
       helm upgrade prometheus-test  prometheus-community/prometheus -f values.yaml
 
 We can now find  the postgres-exporter in the targets  section and we can also see the exporter in query when we check for "pg_exporter_scrapes_total" 
 
 ![image](https://github.com/sarvanand14/devops-assesment/assets/142403605/f349d631-0518-41b9-91a5-53ecc3509696)
+
+
+The secrets for  the postgres can be found when we use the following commmand
+
+      kubectl get secrets
+      my-release-postgresql                   Opaque               1      13h
+
 
 
